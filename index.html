@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsip Sejarah Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo-yayasan.png" type="image/png">
+</head>
+<body>
+    <header>
+    <div class="header-content">
+        <img src="images/logo-yayasan.png" alt="Logo Yayasan Anda" class="header-logo">
+        <div class="header-text">
+            <h1>Arsip Sejarah Digital</h1>
+            <p>Jelajahi fakta-fakta tersembunyi dari masa lalu.</p>
+        </div>
+        
+        <div class="theme-switcher">
+            <button id="theme-toggle-btn">☀️</button>
+        </div>
+    </div>
+</header>
+
+    <div class="filter-container">
+        <input type="text" id="search-bar" placeholder="Cari berdasarkan judul...">
+        <div id="tag-container">
+            </div>
+    </div>
+
+    <main id="topic-grid" class="topic-grid">
+        <div id="loader" class="loader"></div>
+        </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modal-body">
+                </div>
+        </div>
+    </div>
+    <script src="theme.js"></script> <script src="script.js"></script> </body>
+</html>
+
+    <script src="script.js"></script>
+
+    <button id="back-to-top-btn" title="Kembali">▲</button>
+
+    <footer>
+        <p>&copy; <span id="copyright-year"></span> HasyhiRama. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
