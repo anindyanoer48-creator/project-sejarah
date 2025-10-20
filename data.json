@@ -10,7 +10,7 @@
     {
         "id": 2,
         "title": "Candi Borobudur",
-        "category": "Kerajaan Kuno",
+        "category": "Kerajaan",
         "image": "images/Borobudur.jpg",
         "summary": "Di dasar Candi Borobudur, terdapat relief yang terkubur bernama Karmawibhangga yang menggambarkan hukum sebab-akibat.",
         "fullStory": "Di dasar Candi Borobudur, tersembunyi sebuah bagian yang disebut Karmawibhangga. Bagian ini berisi 160 panel relief yang menggambarkan hukum sebab-akibat (karma). Relief ini sengaja ditutup dengan struktur batu tambahan. Alasan penutupannya masih menjadi perdebatan. Beberapa arkeolog berpendapat ini dilakukan untuk memperkuat stabilitas struktur candi, sementara yang lain berteori bahwa relief yang menggambarkan adegan duniawi tersebut dianggap tidak pantas untuk dipertontonkan di sebuah bangunan suci."
@@ -30,5 +30,37 @@
         "image": "images/kartini.jpg",
         "summary": "Selain memperjuangkan hak perempuan, Kartini juga berperan dalam pendidikan anak-anak di desa.",
         "fullStory": "Raden Ajeng Kartini dikenal sebagai pelopor emansipasi wanita di Indonesia. Namun, peranannya tidak hanya terbatas pada perjuangan hak-hak perempuan. Kartini juga sangat peduli terhadap pendidikan anak-anak di desanya. Ia mendirikan sekolah untuk anak-anak perempuan di Rembang dan mendorong pendidikan bagi anak-anak laki-laki. Melalui surat-suratnya, Kartini mengungkapkan keinginannya untuk melihat generasi muda Indonesia yang terdidik dan mampu bersaing di dunia modern."
+    },
+    {
+        "id": 5,
+        "title": "Perjanjian Giyanti",
+        "category": "Kerajaan",
+        "image": "images/giyanti.jpg",
+        "summary": "Perjanjian Giyanti pada 1755 membagi Kesultanan Mataram menjadi dua bagian: Yogyakarta dan Surakarta.",
+        "fullStory": "Perjanjian Giyanti adalah sebuah perjanjian yang ditandatangani pada tahun 1755 yang mengakhiri konflik internal di Kesultanan Mataram. Perjanjian ini membagi Kesultanan Mataram menjadi dua bagian: Kesultanan Yogyakarta yang dipimpin oleh Sultan Hamengkubuwono I, dan Kasunanan Surakarta yang dipimpin oleh Pakubuwono III. Pembagian ini dilakukan untuk meredakan perselisihan antara para penguasa lokal dan mengurangi ketegangan di wilayah tersebut. Perjanjian ini juga menandai awal dari dominasi Belanda di Jawa, karena mereka memainkan peran penting dalam mediasi dan penegakan perjanjian tersebut."
+    },
+    {
+        "id": 6,
+        "title": "Sumpah Pemuda",
+        "category": "Pra-Kemerdekaan",
+        "image": "images/sumpah-pemuda.jpg",
+        "summary": "Sumpah Pemuda pada 28 Oktober 1928 menegaskan tiga ikrar: satu tanah air, satu bangsa, dan satu bahasa Indonesia.",
+        "fullStory": "Sumpah Pemuda adalah sebuah deklarasi yang diikrarkan pada tanggal 28 Oktober 1928 oleh para pemuda Indonesia dalam Kongres Pemuda II di Batavia (sekarang Jakarta). Deklarasi ini menegaskan tiga ikrar penting: satu tanah air, yaitu Indonesia; satu bangsa, yaitu bangsa Indonesia; dan satu bahasa, yaitu bahasa Indonesia. Sumpah Pemuda menjadi tonggak penting dalam sejarah pergerakan nasional Indonesia, karena memperkuat rasa persatuan dan identitas nasional di tengah keberagaman suku, agama."
+    },
+    {
+        "id": 7,
+        "title": "Perang Diponegoro",
+        "category": "Era Kolonial",
+        "image": "images/diponegoro.jpg",
+        "summary": "Perang Diponegoro (1825-1830) adalah perlawanan besar-besaran rakyat Jawa melawan penjajahan Belanda.",
+        "fullStory": "Perang Diponegoro, yang berlangsung dari tahun 1825 hingga 1830, adalah salah satu perlawanan terbesar rakyat Jawa terhadap penjajahan Belanda. Dipimpin oleh Pangeran Diponegoro, perang ini dipicu oleh ketidakpuasan terhadap kebijakan kolonial yang merugikan rakyat, termasuk pajak yang tinggi dan campur tangan dalam urusan adat. Perang ini melibatkan taktik gerilya dan mendapat dukungan luas dari berbagai lapisan masyarakat Jawa. Meskipun pada akhirnya Diponegoro ditangkap dan diasingkan, perang ini meninggalkan warisan penting dalam sejarah perjuangan kemerdekaan Indonesia."
+    },
+    {
+        "id": 8,
+        "title": "Sistem Tanam Paksa",
+        "category": "Era Kolonial",
+        "image": "images/tanampaksa.jpg",
+        "summary": "Sistem Tanam Paksa (Cultuurstelsel) memaksa petani Indonesia menanam tanaman ekspor untuk keuntungan Belanda.",
+        "fullStory": "Sistem Tanam Paksa, atau Cultuurstelsel, diberlakukan oleh pemerintah kolonial Belanda di Indonesia pada tahun 1830. Sistem ini mewajibkan petani pribumi untuk menanam tanaman ekspor seperti kopi, tebu, dan nila di sebagian tanah mereka, yang kemudian harus diserahkan kepada pemerintah kolonial. Tujuan utama dari sistem ini adalah untuk meningkatkan pendapatan Belanda dari koloni mereka. Namun, sistem ini menyebabkan penderitaan besar bagi petani Indonesia, karena mereka kehilangan sebagian besar hasil panen mereka dan sering kali harus bekerja dalam kondisi yang sangat buruk. Sistem Tanam Paksa akhirnya dihapuskan pada akhir abad ke-19 setelah mendapat kritik luas dari berbagai pihak."
     }
 ]
