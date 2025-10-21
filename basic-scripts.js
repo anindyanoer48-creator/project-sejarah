@@ -1,4 +1,4 @@
-// basic-scripts.js
+// basic-scripts.js (Versi Final Bersih)
 document.addEventListener('DOMContentLoaded', () => {
 
     // Logika untuk Copyright
@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const backToTopButton = document.getElementById("back-to-top-btn");
     if (backToTopButton) {
         window.onscroll = () => {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            // Menggunakan nilai scroll yang konsisten di semua browser
+            const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            if (scrollPosition > 200) {
                 backToTopButton.classList.add("show");
             } else {
                 backToTopButton.classList.remove("show");
@@ -18,5 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
         backToTopButton.addEventListener("click", () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+    }
+    
+    // Inisialisasi AOS untuk semua halaman
+    // Pastikan AOS Library sudah dimuat SEBELUM skrip ini di HTML
+    if (typeof AOS !== 'undefined') {
+         AOS.init({
+            duration: 800, 
+            once: true     
+        });
+    } else {
+        console.error("AOS Library not loaded before basic-scripts.js");
     }
 });

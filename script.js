@@ -1,23 +1,13 @@
-// script.js (Versi Aman dengan "Guard Clause")
+// script.js (Versi Final Bersih + Penjaga Benar)
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 
-    // --- INI ADALAH "PENJAGA" KITA ---
-    // 
-    // Kita cek elemen yang HANYA ADA di halaman home, yaitu 'search-bar'
+    // --- "PENJAGA" UNTUK HALAMAN HOME ---
     const searchBar = document.getElementById('search-bar');
-    
-    // Jika 'search-bar' TIDAK DITEMUKAN,
-    // berarti ini bukan halaman home. Hentikan skrip ini.
     if (!searchBar) {
-        console.log("script.js (Home) dihentikan, ini bukan halaman home.");
-        return; // Hentikan eksekusi
+        return; // Hentikan jika ini bukan halaman Home
     }
-    // 
-    // --- AKHIR DARI "PENJAGA" ---
-    // 
+    // --- AKHIR PENJAGA ---
 
-    // Jika kode lolos dari penjaga, baru jalankan sisa skrip halaman Home:
     const topicGrid = document.getElementById('topic-grid');
     const loader = document.getElementById('loader');
     const tagContainer = document.getElementById('tag-container');
@@ -59,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         topics.forEach(topic => {
             const card = document.createElement('div');
             card.className = 'topic-card';
+            // Terapkan atribut AOS (inisialisasi ada di basic-scripts.js)
             card.setAttribute('data-aos', 'fade-up'); 
 
             card.innerHTML = `
@@ -72,6 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             topicGrid.appendChild(card);
         });
+        // Refresh AOS setelah menambahkan elemen baru (penting!)
+        if (typeof AOS !== 'undefined') {
+            AOS.refresh();
+        }
     }
 
     function createTags() {
@@ -104,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
         displayTopics(filteredTopics);
     }
     
-    // Event Listeners
     searchBar.addEventListener('input', applyFilters);
 
     topicGrid.addEventListener('click', (e) => {
@@ -114,6 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Mulai aplikasi
     fetchData();
 });
+// KURUNG KURAWAL EKSTRA DIHAPUS
