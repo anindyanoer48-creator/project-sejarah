@@ -70,5 +70,29 @@
         "image": "images/cut-nyak-dhiennn.jpg",
         "summary": "Cut Nyak Dhien adalah pahlawan wanita Aceh yang memimpin perlawanan melawan penjajahan Belanda.",
         "fullStory": "Cut Nyak Dhien adalah seorang pahlawan wanita dari Aceh yang dikenal karena perannya dalam memimpin perlawanan melawan penjajahan Belanda pada akhir abad ke-19. Setelah suaminya, Teuku Umar, gugur dalam pertempuran, Cut Nyak Dhien mengambil alih kepemimpinan perjuangan. Ia menggunakan strategi gerilya untuk melawan pasukan Belanda dan menjadi simbol keberanian serta ketabahan bagi rakyat Aceh. Meskipun akhirnya ditangkap dan diasingkan oleh Belanda, perjuangan Cut Nyak Dhien tetap dikenang sebagai bagian penting dari sejarah perlawanan Indonesia terhadap kolonialisme."
+    },
+    {
+        "id": 10,
+        "title": "Proklamasi Kemerdekaan Indonesia",
+        "category": "Kemerdekaan",
+        "image": "images/proklamasi.jpg",
+        "summary": "Proklamasi Kemerdekaan Indonesia dibacakan oleh Soekarno pada 17 Agustus 1945 di Jakarta.",
+        "fullStory": "Proklamasi Kemerdekaan Indonesia adalah momen bersejarah yang menandai kemerdekaan Indonesia dari penjajahan Belanda. Proklamasi ini dibacakan oleh Soekarno, yang kemudian menjadi Presiden pertama Indonesia, pada tanggal 17 Agustus 1945 di Jakarta. Dalam teks proklamasi yang singkat namun penuh makna tersebut, Soekarno menyatakan bahwa \"Kami bangsa Indonesia dengan ini menyatakan kemerdekaan Indonesia.\" Momen ini menjadi titik awal bagi perjuangan panjang bangsa Indonesia untuk mempertahankan kemerdekaannya dan membangun negara yang merdeka, bersatu, berdaulat, adil, dan makmur."
+    },
+    {
+        "id": 11,
+        "title": "BPUPKI",
+        "category": "Pra-Kemerdekaan",
+        "image": "images/bpupki.jpg",
+        "summary": "BPUPKI (Badan Penyelidik Usaha-usaha Persiapan Kemerdekaan Indonesia) dibentuk pada 1945 untuk mempersiapkan kemerdekaan Indonesia.",
+        "fullStory": "BPUPKI, atau Badan Penyelidik Usaha-usaha Persiapan Kemerdekaan Indonesia, adalah sebuah badan yang dibentuk oleh pemerintah Jepang pada tahun 1945. Tujuan utama dari BPUPKI adalah untuk mempersiapkan kemerdekaan Indonesia dengan menyusun dasar-dasar negara dan konstitusi. BPUPKI terdiri dari tokoh-tokoh penting dari berbagai latar belakang, termasuk Soekarno, Mohammad Hatta, dan lainnya. Badan ini mengadakan dua sidang besar, di mana mereka membahas berbagai aspek penting seperti bentuk negara, sistem pemerintahan, dan hak-hak warga negara. Hasil kerja BPUPKI menjadi dasar bagi pembentukan Republik Indonesia setelah proklamasi kemerdekaan pada 17 Agustus 1945."
+    },
+    {
+        "id": 12,
+        "title": "PPKI",
+        "category": "Pra-Kemerdekaan",
+        "image": "images/ppki.jpg",
+        "summary": "PPKI (Panitia Persiapan Kemerdekaan Indonesia) dibentuk setelah BPUPKI untuk menyelesaikan persiapan kemerdekaan Indonesia.",
+        "fullStory": "PPKI, atau Panitia Persiapan Kemerdekaan Indonesia, adalah sebuah badan yang dibentuk pada tanggal 7 Agustus 1945, setelah BPUPKI (Badan Penyelidik Usaha-usaha Persiapan Kemerdekaan Indonesia) menyelesaikan tugasnya. PPKI bertugas untuk menyelesaikan persiapan kemerdekaan Indonesia, termasuk merumuskan undang-undang dasar dan memilih presiden serta wakil presiden. PPKI terdiri dari tokoh-tokoh penting seperti Soekarno, Mohammad Hatta, dan lainnya. Pada sidang pertamanya pada tanggal 18 Agustus 1945, PPKI mengesahkan Undang-Undang Dasar 1945 dan memilih Soekarno sebagai Presiden serta Mohammad Hatta sebagai Wakil Presiden Republik Indonesia. PPKI memainkan peran krusial dalam transisi Indonesia menuju kemerdekaan."
     }
 ]
