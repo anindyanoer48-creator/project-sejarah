@@ -3,7 +3,7 @@
 :root {
     /* style.css */
     --primary-color: #d4c6a1;
-    --secondary-color: #1976d2;
+    --secondary-color: #a1aebb;
 
     /* Warna untuk Mode Terang (Light Mode) */
     --background-color: #fbfcf8;
@@ -21,12 +21,12 @@
 /* BLOK TERPISAH UNTUK DARK MODE */
 body.dark-mode {
     --primary-color: #2a211c; 
-    --secondary-color: #42a5f5;
+    --secondary-color: #a1aebb;
     
     --background-color: #121212;
     --card-bg-color: #3b2f28;
-    --text-color: #e0e0e0;
-    --header-text-color: #F5E8C7;
+    --text-color: #ffffff;
+    --header-text-color: #afa280;
     --footer-bg-color: #1e1e1e;
     --footer-text-color: #a0a0a0;
     --shadow: 0 4px 8px rgba(0,0,0,0.3);
@@ -344,13 +344,13 @@ footer p {
 
 .article-title {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--header-text-color);
     margin: 0;
 }
 
 .article-category {
     font-size: 1rem;
-    color: #777;
+    color: var(--secondary-color);
     margin-top: 0.5rem;
 }
 
@@ -365,7 +365,7 @@ footer p {
 .article-body p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #333;
+    color: var(--text-color);
 }
 
 .back-link {
@@ -477,7 +477,7 @@ footer p {
 
 #breadcrumb-nav .current-page {
     font-weight: bold;
-    color: #333;
+    color: var(--text-color);
 }
 /* Gaya Tombol Pengalih Tema */
 .theme-switcher {
