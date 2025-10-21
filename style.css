@@ -2,7 +2,7 @@
 /* BLOK :root UNTUK LIGHT MODE (DEFAULT) */
 :root {
     /* style.css */
-    --primary-color: #d4c6a1;
+    --primary-color: #8d7c4c;
     --secondary-color: #a1aebb;
 
     /* Warna untuk Mode Terang (Light Mode) */
@@ -10,7 +10,7 @@
     --card-bg-color: #ffffff;
     --text-color: #333;
     --header-text-color: #a3803d;
-    --footer-bg-color: #f5eacc;
+    --footer-bg-color: #f3ead3;
     --footer-text-color: #555;
     --shadow: 0 4px 8px rgba(0,0,0,0.1);
 
@@ -20,7 +20,7 @@
     
 /* BLOK TERPISAH UNTUK DARK MODE */
 body.dark-mode {
-    --primary-color: #2a211c; 
+    --primary-color: #1f3342; 
     --secondary-color: #a1aebb;
     
     --background-color: #121212;
@@ -63,7 +63,7 @@ header {
 }
 
 .header-logo {
-    max-height: 100px; /* Atur ukuran logo sesuai keinginan Anda */
+    max-height: 80px; /* Atur ukuran logo sesuai keinginan Anda */
     width: auto; /* Menjaga rasio aspek logo */
 }
 
