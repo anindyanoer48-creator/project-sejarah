@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         
         setupShareButtons(article);
-        setupDisqus(article); 
         
         // 
         // --- INI PERBAIKANNYA (3/3) ---
@@ -125,7 +124,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const encodedUrl = encodeURIComponent(url);
         const encodedTitle = encodeURIComponent(title);
         
-        container.innerHTML = `
+        // --- PERBAIKAN KECIL ---
+        // Menggunakan '=' (ganti) bukan '+=' (tambah) untuk menghindari judul duplikat
+        container.innerHTML = ` 
             <h4>Bagikan cerita ini:</h4>
             <div class="share-buttons-wrapper">
                 <a href="https://api.whatsapp.com/send?text=${encodedTitle}%20${encodedUrl}" class="share-btn whatsapp" target="_blank">WhatsApp</a>
@@ -147,38 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Fungsi untuk Disqus (Komentar)
-    function setupDisqus(article) {
-        var disqus_thread = document.getElementById('disqus_thread');
-        if (!disqus_thread) return;
-
-        while (disqus_thread.firstChild) {
-            disqus_thread.removeChild(disqus_thread.firstChild);
-        }
-        
-        // GANTI DENGAN SHORTNAME DISQUS ANDA
-        var disqus_shortname = 'arsip-sejarah-digital'; 
-        var disqus_config = function () {
-            this.page.url = window.location.href;
-            this.page.identifier = article.id;
-            this.page.title = article.title;
-        };
-
-        (function() {
-            if (document.getElementById('dsq-embed-scr')) {
-                DISQUS.reset({
-                    reload: true,
-                    config: disqus_config
-                });
-            } else {
-                var d = document, s = d.createElement('script');
-                s.id = 'dsq-embed-scr';
-                s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            }
-        })();
-    }
+    // --- FUNGSI setupDisqus() SUDAH DIHAPUS DARI SINI ---
 
     // Fungsi untuk breadcrumbs
     function displayBreadcrumbs(article) {
