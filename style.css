@@ -63,7 +63,7 @@ header {
 }
 
 .header-logo {
-    max-height: 70px; /* Atur ukuran logo sesuai keinginan Anda */
+    max-height: 100px; /* Atur ukuran logo sesuai keinginan Anda */
     width: auto; /* Menjaga rasio aspek logo */
 }
 
