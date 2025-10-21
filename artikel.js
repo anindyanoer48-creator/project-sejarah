@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h4>Bagikan cerita ini:</h4>
             <div class="share-buttons-wrapper">
                 <a href="https://api.whatsapp.com/send?text=${encodedTitle}%20${encodedUrl}" class="share-btn whatsapp" target="_blank">WhatsApp</a>
-                <a href="https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}" class="share-btn twitter" target="_blank">Twitter</a>
+                <a href="https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}" class="share-btn twitter" target="_blank">X</a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}" class="share-btn facebook" target="_blank">Facebook</a>
                 <button id="copy-link-btn" class="share-btn copy-link">Salin Tautan</button>
             </div>
