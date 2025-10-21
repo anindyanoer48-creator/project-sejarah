@@ -1,53 +1,65 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lensa Historika</title>
+    
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/logo-yayasan.png" type="image/png">
-</head>
-<body>
-    <header>
-    <div class="header-content">
-        <img src="images/logo-yayasan.png" alt="Logo Yayasan Anda" class="header-logo">
-        <div class="header-text">
-            <h1>Lensa Historika</h1>
-            <p>Menguak Fakta dan Kontroversi Sejarah Dunia</p>
-        </div>
-        
-        <div class="theme-switcher">
-            <button id="theme-toggle-btn">☀️</button>
-        </div>
-    </div>
-</header>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+ </head>
+    <body>
 
-    <div class="filter-container">
+     <header>
+        <div class="header-content">
+            <img src="images/logo-yayasan.png" alt="Logo Yayasan Anda" class="header-logo">
+            <div class="header-text">
+                <h1>Lensa Historika</h1>
+                <p>Menguak Fakta dan Kontroversi Sejarah Dunia</p>
+            </div>
+            
+            <div class="theme-switcher">
+                <button id="theme-toggle-btn">☀️</button>
+            </div>
+        </div>
+        <div class="header-content">
+        </div>
+
+    <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="tentang.html">Tentang Kami</a>
+    </nav>
+     </header>
+
+     <div class="filter-container">
         <input type="text" id="search-bar" placeholder="Cari berdasarkan judul...">
         <div id="tag-container">
             </div>
-    </div>
+     </div>
 
-    <main id="topic-grid" class="topic-grid">
+     <main id="topic-grid" class="topic-grid">
         <div id="loader" class="loader"></div>
         </main>
 
-    <div id="modal" class="modal">
+     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <div id="modal-body">
                 </div>
         </div>
-    </div>
-    <script src="theme.js"></script> <script src="script.js"></script> </body>
-</html>
+     </div>
 
-    <script src="script.js"></script>
+     <button id="back-to-top-btn" title="Kembali">▲</button>
 
-    <button id="back-to-top-btn" title="Kembali">▲</button>
-
-    <footer>
+     <footer>
         <p>&copy; <span id="copyright-year"></span> HasyhiRama. All Rights Reserved.</p>
-    </footer>
-</body>
-</html>
+     </footer>
+
+       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+       <script src="theme.js"></script> 
+       <script src="script.js"></script> 
+    </body>
+ </html> 
+

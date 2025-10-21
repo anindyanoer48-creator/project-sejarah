@@ -12,32 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let activeTag = 'All';
 
     // Fungsi untuk menerapkan filter berdasarkan kategori
-    // 👇 TAMBAHKAN KODE INI UNTUK MEMBACA URL 👇
     const params = new URLSearchParams(window.location.search);
     const categoryFromUrl = params.get('kategori');
     if (categoryFromUrl) {
         activeTag = categoryFromUrl;
     }
 
+    // --- PERBAIKAN: Fungsi fetchData() yang sudah digabung dan diperbaiki ---
     async function fetchData() {
         loader.classList.add('show'); // Tampilkan spinner
         topicGrid.style.display = 'none'; // Sembunyikan grid sementara
-        try {
-            // ... (kode fetch Anda tidak berubah) ...
-            const response = await fetch('data.json');
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            allTopics = await response.json();
-            displayTopics(allTopics);
-            createTags();
-        } catch (error) {
-            // ... (kode catch Anda tidak berubah) ...
-        } finally {
-            loader.classList.remove('show'); // Sembunyikan spinner
-            topicGrid.style.display = 'grid'; // Tampilkan lagi grid
-        }
-    }
-    // 1. Mengambil data dari file JSON
-    async function fetchData() {
         try {
             const response = await fetch('data.json');
             if (!response.ok) {
@@ -49,8 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error("Gagal mengambil data:", error);
             topicGrid.innerHTML = "<p>Gagal memuat data. Silakan coba lagi nanti.</p>";
+        } finally {
+            loader.classList.remove('show'); // Sembunyikan spinner
+            topicGrid.style.display = 'grid'; // Tampilkan lagi grid
         }
     }
+    // --- FUNGSI fetchData() DUPLIKAT YANG KEDUA TELAH DIHAPUS ---
 
     // 2. Menampilkan semua kartu topik
     function displayTopics(topics) {
@@ -63,6 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
         topics.forEach(topic => {
             const card = document.createElement('div');
             card.className = 'topic-card';
+
+            // --- TAMBAHAN KODE AOS (Langkah 1) ---
+            // Menambahkan atribut data-aos untuk animasi
+            card.setAttribute('data-aos', 'fade-up');
+            // ------------------------------------
+
             card.innerHTML = `
                 <img src="${topic.image}" alt="${topic.title}" class="card-image">
                 <div class="card-content">
@@ -119,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
         displayTopics(filteredTopics);
     }
     
-    // 5. Logika untuk Modal
+    // 5. Logika untuk Modal (Dibiarkan jika masih dipakai)
     function openModal(topicId) {
         const topic = allTopics.find(t => t.id === topicId);
         if (topic) {
@@ -141,12 +135,12 @@ document.addEventListener('DOMContentLoaded', () => {
     searchBar.addEventListener('input', applyFilters);
 
     topicGrid.addEventListener('click', (e) => {
-    if (e.target.classList.contains('read-more-btn')) {
-        const topicId = e.target.getAttribute('data-id');
-        // Arahkan pengguna ke halaman baru dengan menyertakan ID artikel
-        window.location.href = `artikel.html?id=${topicId}`;
-    }
-});
+        if (e.target.classList.contains('read-more-btn')) {
+            const topicId = e.target.getAttribute('data-id');
+            // Arahkan pengguna ke halaman baru dengan menyertakan ID artikel
+            window.location.href = `artikel.html?id=${topicId}`;
+        }
+    });
 
     closeButton.addEventListener('click', closeModal);
 
@@ -158,8 +152,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mulai aplikasi
     fetchData();
+
+    // Copyright
     const yearSpan = document.getElementById('copyright-year');
     yearSpan.textContent = new Date().getFullYear();
+
+    // --- TAMBAHAN KODE AOS (Langkah 2) ---
+    // Menginisialisasi ("menyalakan") AOS
+    AOS.init({
+        duration: 800, // Durasi animasi dalam milidetik
+        once: true     // Animasi hanya terjadi satu kali
+    });
+    // ------------------------------------
 
     // Tombol Kembali ke Atas
     const backToTopButton = document.getElementById("back-to-top-btn");

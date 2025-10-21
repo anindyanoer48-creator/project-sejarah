@@ -2,15 +2,15 @@
 /* BLOK :root UNTUK LIGHT MODE (DEFAULT) */
 :root {
     /* style.css */
-    --primary-color: #8d7c4c;
+    --primary-color: #dbd4b8;
     --secondary-color: #a1aebb;
 
     /* Warna untuk Mode Terang (Light Mode) */
-    --background-color: #fbfcf8;
-    --card-bg-color: #ffffff;
+    --background-color: #ffffff;
+    --card-bg-color: #f5f4ee;
     --text-color: #333;
     --header-text-color: #a3803d;
-    --footer-bg-color: #f3ead3;
+    --footer-bg-color: #f0ece1;
     --footer-text-color: #555;
     --shadow: 0 4px 8px rgba(0,0,0,0.1);
 
@@ -20,11 +20,11 @@
     
 /* BLOK TERPISAH UNTUK DARK MODE */
 body.dark-mode {
-    --primary-color: #1f3342; 
+    --primary-color: #5a5750; 
     --secondary-color: #a1aebb;
     
-    --background-color: #121212;
-    --card-bg-color: #3b2f28;
+    --background-color: #000000;
+    --card-bg-color: #2c2b26;
     --text-color: #ffffff;
     --header-text-color: #afa280;
     --footer-bg-color: #1e1e1e;
@@ -355,11 +355,15 @@ footer p {
 }
 
 .article-image {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
+    max-width: 100%; /* Gambar tidak akan lebih lebar dari kontainer */
+    height: auto;    /* Tinggi akan menyesuaikan secara otomatis */
+    display: block;  /* Perlu agar margin auto berfungsi */
+
+    /* Ini akan membuat gambar potret (seperti R.A. Kartini) 
+       tampil di tengah jika lebih sempit dari kontainer */
+    margin: 0 auto 2rem auto; 
+
     border-radius: 8px;
-    margin-bottom: 2rem;
 }
 
 .article-body p {
@@ -500,4 +504,130 @@ footer p {
 
 #theme-toggle-btn:hover {
     transform: scale(1.1) rotate(15deg);
+}
+/* =============================
+   RELATED ARTICLES STYLES
+   ============================= */
+
+.related-articles-container {
+    max-width: 1200px; /* Samakan dengan grid utama */
+    margin: 3rem auto 2rem auto;
+    padding: 0 1rem;
+}
+
+.related-articles-container h2 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    display: table; /* Trik agar border pas dengan teks */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Kita atur ulang grid di sini agar muat 3 kartu */
+.related-articles-container .topic-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Penyesuaian kartu agar lebih ringkas */
+.related-articles-container .topic-card .summary,
+.related-articles-container .topic-card .category {
+    display: none; /* Sembunyikan ringkasan dan kategori */
+}
+
+.related-articles-container .topic-card .card-content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.related-articles-container .topic-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Penyesuaian untuk mobile */
+@media (max-width: 768px) {
+    .related-articles-container .topic-grid {
+        /* Kembali ke 1 kolom di mobile */
+        grid-template-columns: 1fr;
+    }
+}
+/* =============================
+   MAIN NAVIGATION STYLES
+   ============================= */
+.main-nav {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.main-nav a {
+    color: var(--header-text-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    /* KODE BARU UNTUK KOTAK */
+    border: 1px solid var(--header-text-color);
+    border-radius: 5px;
+}
+
+.main-nav a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: transparent;
+}
+
+.main-nav a.active {
+    color: var(--primary-color);
+    background-color: var(--card-bg-color);
+    border-radius: 5px;
+    border-color: var(--card-bg-color);
+}
+
+/* Penyesuaian Navigasi untuk Mode Gelap */
+body.dark-mode .main-nav a.active {
+    color: var(--secondary-color);
+}
+
+/* =============================
+   STATIC PAGE (TENTANG KAMI) STYLES
+   ============================= */
+.static-page-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--card-bg-color);
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+}
+
+.static-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.static-content h1 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.static-content h2 {
+    color: var(--text-color);
+    margin-top: 2rem;
+}
+
+/* Penyesuaian Halaman Statis untuk Mobile */
+@media (max-width: 768px) {
+    .static-page-container {
+        padding: 1.5rem;
+    }
+    .static-content h1 {
+        font-size: 1.8rem;
+    }
 }

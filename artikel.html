@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memuat Artikel...</title>
+    
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/logo-yayasan.png" type="image/png">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-<body>
-    <header>
+<body> <header>
         <div class="header-content">
             <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 20px;">
                 <img src="images/logo-yayasan.png" alt="Logo Yayasan Anda" class="header-logo">
@@ -20,34 +22,46 @@
                <button id="theme-toggle-btn">☀️</button>
             </div>
         </div>
+        <div class="header-content">
+        </div>
+
+    <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="tentang.html">Tentang Kami</a>
+    </nav>
     </header>
 
     <main class="article-page-container">
         <nav id="breadcrumb-nav" aria-label="breadcrumb"></nav>
         <div id="loader" class="loader"></div>
+        
         <div id="article-content">
-            <p>Memuat konten, harap tunggu...</p>
-        </div>
-        <div id="article-content">
-    <div class="article-body">
-        </div>
+            </div>
+    </main> <section id="related-articles" class="related-articles-container">
+        <h2>Artikel Terkait Lainnya</h2>
+        <div id="related-grid" class="topic-grid">
+            </div>
+    </section>
 
     <div id="share-buttons-container" class="share-buttons-container">
         <h4>Bagikan cerita ini:</h4>
         </div>
+    
+    <div id="disqus_thread"></div> 
 
     <a href="index.html" class="back-link">← Kembali ke Daftar Artikel</a>
-</div>
-    </main>
     
     <button id="back-to-top-btn" title="Kembali ke atas">▲</button>
     
     <footer>
         <p>&copy; <span id="copyright-year">2025</span> HasyhiRama. All Rights Reserved.</p>
     </footer>
-    <script src="theme.js"></script> <script src="script.js"></script> </body>
-</html>
 
-    <script src="artikel.js"></script>
-</body>
-</html>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> <script src="theme.js"></script>
+    <script src="artikel.js">
+
+    </script> 
+    
+</body> 
+</html> 
+
