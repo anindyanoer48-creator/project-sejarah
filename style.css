@@ -736,3 +736,84 @@ body.dark-mode .main-nav a.active {
 #otd-content a:hover {
     text-decoration: underline;
 }
+/* =============================
+   FEEDBACK FORM STYLES
+   ============================= */
+.feedback-form-container {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(128, 128, 128, 0.2); /* Garis pemisah tipis */
+}
+
+.feedback-form-container h2 {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.feedback-form-container p {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    color: #6c757d; /* Abu-abu */
+}
+
+/* Penyesuaian warna teks deskripsi untuk mode gelap */
+body.dark-mode .feedback-form-container p {
+    color: #a0a0a0;
+}
+
+
+#feedback-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+#feedback-form label {
+    display: block; /* Label di atas input */
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+#feedback-form input[type="text"],
+#feedback-form input[type="email"],
+#feedback-form textarea {
+    width: 100%; /* Lebar penuh */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Agar padding tidak menambah lebar */
+    background-color: var(--background-color); /* Warna input sesuai tema */
+    color: var(--text-color); /* Warna teks input sesuai tema */
+}
+
+/* Penyesuaian border input untuk mode gelap */
+body.dark-mode #feedback-form input[type="text"],
+body.dark-mode #feedback-form input[type="email"],
+body.dark-mode #feedback-form textarea {
+    border: 1px solid #555;
+}
+
+
+#feedback-form textarea {
+    resize: vertical; /* Izinkan ubah ukuran vertikal saja */
+}
+
+#feedback-form .submit-btn {
+    display: block; /* Tombol jadi lebar penuh */
+    width: 100%;
+    padding: 12px 20px;
+    background-color: var(--primary-color);
+    color: var(--header-text-color); /* Warna teks kontras */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#feedback-form .submit-btn:hover {
+    opacity: 0.9; /* Efek hover sederhana */
+}
