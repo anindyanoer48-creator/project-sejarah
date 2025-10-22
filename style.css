@@ -43,7 +43,7 @@ body {
 
 header {
     background-color: var(--primary-color);
-    color: var(--light-text-color);
+    color: #5c503f;
     padding: 1.5rem 1rem; /* Sedikit mengurangi padding vertikal */
     margin-bottom: 2rem;
 }
