@@ -610,8 +610,8 @@ body.dark-mode .main-nav a.active {
 }
 
 .static-content h1 {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
+    color: #5c503f;
+    border-bottom: 2px solid #5c503f;
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
 }
