@@ -1,5 +1,4 @@
-/* CSS Variables untuk tema yang mudah diubah */
-/* BLOK :root UNTUK LIGHT MODE (DEFAULT) */
+/* Untuk Light mode */
 :root {
     /* style.css */
     --primary-color: #dbd4b8;
@@ -568,8 +567,8 @@ footer p {
     color: var(--header-text-color);
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;
-    padding: 10px 20px;
+    font-size: 0.8rem;
+    padding: 8px 15px;
     transition: background-color 0.3s;
     /* KODE BARU UNTUK KOTAK */
     border: 1px solid var(--header-text-color);
@@ -630,4 +629,110 @@ body.dark-mode .main-nav a.active {
     .static-content h1 {
         font-size: 1.8rem;
     }
+}
+
+/* =============================
+   PAGINATION STYLES (MODERN & MINIMALIS)
+   ============================= */
+.pagination {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap; 
+    
+    /* === PERUBAHAN POSISI === */
+    margin-top: 5rem;  /* Tambah jarak dari kartu di atas */
+    margin-bottom: 2rem; /* Tambah jarak ke footer di bawah */
+    /* Padding atas/bawah dihapus agar jarak dikontrol margin */
+    padding: 0 1rem; /* Padding kiri/kanan agar tidak mepet layar kecil */
+    gap: 10px; 
+}
+
+/* === DESAIN ULANG TOMBOL === */
+.pagination button {
+    background-color: transparent; /* Hilangkan background default */
+    color: var(--text-color); /* Warna teks sesuai tema */
+    border: none; /* Hilangkan border */
+    padding: 10px 15px; /* Sesuaikan padding */
+    border-radius: 5px; /* Sedikit rounded corner */
+    cursor: pointer;
+    font-weight: 600; /* Sedikit lebih tebal */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    min-width: 40px; /* Lebar minimum agar tombol angka tidak terlalu kecil */
+    text-align: center;
+}
+
+/* Efek hover yang halus */
+.pagination button:hover:not(:disabled) {
+    background-color: rgba(128, 128, 128, 0.1); /* Abu-abu transparan lembut */
+    color: var(--primary-color); /* Warna teks jadi warna primer */
+}
+
+/* Tombol Aktif (halaman saat ini) */
+.pagination button.active {
+    background-color: var(--primary-color); /* Background warna primer */
+    color: var(--header-text-color); /* Warna teks kontras (sesuai header) */
+    cursor: default;
+}
+
+/* Tombol Nonaktif (Prev/Next di ujung) */
+.pagination button:disabled {
+    color: rgba(128, 128, 128, 0.5); /* Warna teks pudar */
+    cursor: not-allowed;
+}
+
+/* Style untuk ellipsis '...' */
+.pagination span { 
+    padding: 10px 5px;
+    color: var(--text-color);
+    opacity: 0.6;
+}
+/* =============================
+   ON THIS DAY STYLES
+   ============================= */
+.on-this-day-container {
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+    padding: 1.5rem;
+    background-color: var(--card-bg-color); /* Warna senada kartu */
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    border-left: 5px solid var(--primary-color); /* Aksen warna */
+}
+
+.on-this-day-container h2 {
+    font-size: 1.6rem;
+    color: #5c503f;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+#otd-content .otd-item {
+    margin-bottom: 1rem;
+}
+
+#otd-content .otd-item:last-child {
+    margin-bottom: 0;
+}
+
+#otd-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+#otd-content p {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+/* Link "Baca Selengkapnya" versi kecil */
+#otd-content a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+#otd-content a:hover {
+    text-decoration: underline;
 }
