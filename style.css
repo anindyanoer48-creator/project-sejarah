@@ -25,7 +25,7 @@ body.dark-mode {
     --background-color: #000000;
     --card-bg-color: #2c2b26;
     --text-color: #ffffff;
-    --header-text-color: #afa280;
+    --header-text-color: #fae7b9;
     --footer-bg-color: #1e1e1e;
     --footer-text-color: #a0a0a0;
     --shadow: 0 4px 8px rgba(0,0,0,0.3);
@@ -816,4 +816,248 @@ body.dark-mode #feedback-form textarea {
 
 #feedback-form .submit-btn:hover {
     opacity: 0.9; /* Efek hover sederhana */
+}
+/* =============================
+   HOME PAGE STYLES
+   ============================= */
+.home-page-container {
+    max-width: 900px; /* Atau sesuaikan */
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.featured-news-container {
+     margin-top: 3rem;
+     padding: 1.5rem;
+     background-color: var(--card-bg-color); /* Senada dengan OTD */
+     border-radius: 8px;
+     box-shadow: var(--shadow);
+     border-left: 5px solid var(--secondary-color); /* Aksen warna beda */
+}
+
+.featured-news-container h2 {
+    font-size: 1.6rem;
+    color: var(--text-color); /* Warna normal */
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.news-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+.news-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.news-item h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color); /* Warna judul item */
+}
+
+.news-item p {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+/* Style untuk link di Sekilas Info */
+#featured-news-content a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-block; /* Agar margin-top bekerja */
+    margin-top: 0.5rem; 
+}
+#featured-news-content a:hover {
+    text-decoration: underline;
+}
+/* =============================
+   FIX: Dashboard Home Visibility
+   Tambahkan di bagian PALING BAWAH style.css
+   ============================= */
+
+#on-this-day,
+.featured-news-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    height: auto !important;
+}
+
+/* Pastikan konten di dalamnya juga terlihat */
+#otd-content,
+#featured-news-content {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Untuk memastikan container utama juga terlihat */
+.home-page-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+/* =============================
+   FIX LENGKAP: Dark Mode Contrast
+   Tambahkan di bagian PALING BAWAH style.css
+   ============================= */
+
+/* 1. Fix Header "Lensa Historika" */
+body.dark-mode .header-text h1 {
+    color: #cccccc !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Biar lebih pop */
+}
+
+body.dark-mode .header-text p {
+    color: #c0bfbe !important;
+}
+
+/* 2. Fix Navigasi Menu */
+body.dark-mode .main-nav a {
+    color: #e0e0e0 !important;
+    border-color: #e0e0e0 !important;
+}
+
+body.dark-mode .main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .main-nav a.active {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-color: #ffffff !important;
+}
+
+/* 3. Fix Judul di Dashboard & Sekilas Info */
+body.dark-mode #on-this-day h2,
+body.dark-mode .featured-news-container h2 {
+    color: #f5f5f5 !important;
+}
+
+body.dark-mode .otd-item h3,
+body.dark-mode .news-item h3,
+body.dark-mode #featured-news-content h3 {
+    color: #ffffff !important;
+}
+
+/* 4. Fix Paragraf/Deskripsi */
+body.dark-mode .otd-item p,
+body.dark-mode .news-item p,
+body.dark-mode #otd-content p,
+body.dark-mode #featured-news-content p {
+    color: #d0d0d0 !important;
+}
+
+/* 5. Fix Link "Baca Selengkapnya" */
+body.dark-mode #otd-content a,
+body.dark-mode #featured-news-content a,
+body.dark-mode .otd-link,
+body.dark-mode .news-link {
+    color: #8a8b7c !important; /* Biru cerah yang kontras */
+    font-weight: 600;
+}
+
+body.dark-mode #otd-content a:hover,
+body.dark-mode #featured-news-content a:hover {
+    color: #a8d8eb !important;
+    text-decoration: underline;
+}
+
+/* 6. Fix Border/Accent warna di box */
+body.dark-mode .on-this-day-container {
+    border-left-color: #8b8876 !important; /* Biru cerah */
+}
+
+body.dark-mode .featured-news-container {
+    border-left-color: #9db4c0 !important; /* Abu-abu biru terang */
+}
+
+/* 7. Fix Kategori di Card Artikel */
+body.dark-mode .category {
+    color: #585647 !important;
+    font-weight: 600;
+}
+
+/* 8. Fix Tombol "Read More" di Card */
+body.dark-mode .read-more-btn {
+    background-color: #5a5750 !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .read-more-btn:hover {
+    background-color: #6e6a60 !important;
+}
+
+/* 9. Fix Search Bar & Filter */
+body.dark-mode #search-bar {
+    background-color: #2c2b26 !important;
+    color: #ffffff !important;
+    border-color: #555 !important;
+}
+
+body.dark-mode #search-bar::placeholder {
+    color: #999 !important;
+}
+
+/* 10. Fix Tag Buttons */
+body.dark-mode .tag-btn {
+    background-color: #3a3a3a !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .tag-btn.active,
+body.dark-mode .tag-btn:hover {
+    background-color: #7ec8e3 !important;
+    color: #000000 !important;
+}
+
+/* 11. Fix Footer */
+body.dark-mode footer {
+    color: #b0b0b0 !important;
+}
+
+/* 12. Fix Breadcrumb */
+body.dark-mode #breadcrumb-nav a {
+    color: #7ec8e3 !important;
+}
+
+body.dark-mode #breadcrumb-nav .current-page {
+    color: #e0e0e0 !important;
+}
+
+/* 13. Fix Share Buttons (jika ada) */
+body.dark-mode .share-buttons-container h4 {
+    color: #f5f5f5 !important;
+}
+
+/* 14. Fix Pagination */
+body.dark-mode .pagination button {
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .pagination button:hover:not(:disabled) {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #7ec8e3 !important;
+}
+
+body.dark-mode .pagination button.active {
+    background-color: #7ec8e3 !important;
+    color: #000000 !important;
+}
+
+/* 15. Fix Label Emoji di fallback random */
+body.dark-mode #otd-content em {
+    color: #d0d0d0 !important;
+}
+.news-item h3,
+#featured-news-content h3 {
+    color: var(--header-text-color) !important; /* Coklat keemasan di light mode */
 }

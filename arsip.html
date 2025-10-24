@@ -3,7 +3,7 @@
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lensa Historika - Halaman Depan</title>
+    <title>Arsip Artikel - Lensa Historika</title>
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/logo-yayasan.png" type="image/png">
@@ -12,7 +12,7 @@
  <body>
      <header>
         <div class="header-content">
-            <img src="images/logo-yayasan.png" alt="Logo Lensa Historika by HasyhiRama" class="header-logo">
+             <img src="images/logo-yayasan.png" alt="Logo Lensa Historika by HasyhiRama" class="header-logo">
             <div class="header-text">
                 <h1>Lensa Historika</h1>
                 <p>Menguak Fakta dan Kontroversi Sejarah Dunia</p>
@@ -22,25 +22,23 @@
             </div>
         </div>
         <nav class="main-nav">
-            <a href="index.html" class="active">Home</a>
-            <a href="arsip.html">Artikel</a>
-            <a href="tentang.html">Tentang Kami</a>
+            <a href="index.html">Home</a>
+            <a href="arsip.html" class="active">Artikel</a> <a href="tentang.html">Tentang Kami</a>
         </nav>
      </header>
 
-     <main class="home-page-container">
-         <section id="on-this-day" class="on-this-day-container">
-             <h2>Pada Hari Ini Dalam Sejarah...</h2>
-             <div id="otd-content">
-                 <p>Memuat info...</p> </div>
-         </section>
+     <div class="filter-container">
+        <input type="text" id="search-bar" placeholder="Cari berdasarkan judul...">
+        <div id="tag-container">
+            </div>
+     </div>
 
-         <section id="featured-news" class="featured-news-container">
-             <h2>Sekilas Info</h2>
-             <div id="featured-news-content">
-                 <p>Memuat info...</p> </div>
-         </section>
-     </main>
+     <main id="topic-grid" class="topic-grid">
+        <div id="loader" class="loader"></div>
+        </main>
+
+     <div id="pagination-container" class="pagination">
+         </div>
 
      <button id="back-to-top-btn" title="Kembali ke atas">▲</button>
      <footer>
@@ -49,5 +47,6 @@
 
      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
      <script src="theme.js"></script>
-     <script src="home.js"></script> </body>
+     <script src="arsip.js"></script> 
+    </body>
  </html>
